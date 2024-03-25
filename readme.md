@@ -43,8 +43,11 @@ spec:
 2. Scheme: The configuration sets the scheme to internet-facing, indicating that the ALB should be accessible from the internet.
 
 3. TLS Certificate: The alb.ingress.kubernetes.io/ingress.secret annotation references an ACM certificate ARN for secure HTTPS connections.
+4. alb.ingress.kubernetes.io/shield-advanced-protection: This annotation enables AWS WAF (Web Application Firewall) & Shield Advanced protection on the Application Load Balancer (ALB). Shield Advanced adds additional DDoS mitigation capabilities on top of the standard Shield protection.
 
-4. Routing Rules: The rules section defines multiple path-based routing rules:
+5. alb.ingress.kubernetes.io/wafv2-acl-arn: This annotation associates a WAFv2 Web ACL (Web Application Firewall Access Control List) with the ALB. The Web ACL defines the rules that WAF will use to filter incoming traffic and block potential attacks. You'll need to create the WAFv2 Web ACL separately and provide its ARN (Amazon Resource Name) here.
+
+6. Routing Rules: The rules section defines multiple path-based routing rules:
 
  * Traffic matching /path-a/* is routed to service-a on port 80.
 
