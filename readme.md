@@ -1,4 +1,4 @@
-"""
+```
 apiVersion: networking.k8s.io/v1 
 kind: Ingress
 metadata:
@@ -26,4 +26,4 @@ spec:
             backend:
               serviceName: defualt-service
               servicePort: 80
-"""
+```
