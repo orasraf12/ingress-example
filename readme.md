@@ -1,7 +1,7 @@
 # Example Rule with ACM (using ALB Ingress Controller):
 
 
-![Alt text](arc.png")
+![Image description](arc.png)
 
 
 adding waf to albc - https://aws.amazon.com/blogs/containers/protecting-your-amazon-eks-web-apps-with-aws-waf/
